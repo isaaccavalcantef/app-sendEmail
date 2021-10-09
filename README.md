@@ -1,7 +1,7 @@
 # app-sendEmail
 
 A aplicação de enviar email é um projeto simples com foco em aprendizagem. 
-Consistem em enviar um email atráves da biblioteca PHP Mailer.
+Consiste em enviar um email atráves da biblioteca PHP Mailer.
 
 ## Objetivos
 
