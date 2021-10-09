@@ -20,6 +20,7 @@
         private $para = null;
         private $assunto = null;
         private $mensagem = null;
+        private $senha = null;
 
         public function __get($atributo) {
             return $this->$atributo;
@@ -45,6 +46,8 @@ $mensagem = new Mensagem();
 $mensagem->__set('para', $_POST['para']);
 $mensagem->__set('assunto', $_POST['assunto']);
 $mensagem->__set('mensagem', $_POST['mensagem']);
+$mensagem->__set('senha', $_POST['senha']);
+
 
 
 
@@ -68,13 +71,13 @@ if(!$mensagem->mensagemValida()) {
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'newslatter.dev@gmail.com';                     //SMTP username
-        $mail->Password   = '!dev@email#21$';                               //SMTP password
+        $mail->Password   = $mensagem->__get('senha');    //'!dev@email#21$';       //SMTP password
         $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
         $mail->Port       = 465;                //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
         $mail->setFrom('newslatter.dev@gmail.com', 'Remetente');
-        $mail->addAddress('isaaccavalcantef@gmail.com', 'Destino');     //Add a recipient
+        $mail->addAddress($mensagem->__get('para'));     //Add a recipient
         //$mail->addAddress('ellen@example.com');               //Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');
@@ -86,9 +89,9 @@ if(!$mensagem->mensagemValida()) {
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'O assunto é bolo';
-        $mail->Body    = 'Olha que coisa mais linda <b>mais cheia de graça!</b>';
-        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        $mail->Subject = $mensagem->__get('assunto');
+        $mail->Body    = $mensagem->__get('mensagem');
+        $mail->AltBody = 'É necessario utilizar um client que suporte HTML para ter acesso total ao conteúdo dessa mensagem';
         
         $mail->send();
         echo 'Não foi possivel enviar este email!';

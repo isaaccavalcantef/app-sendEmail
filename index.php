@@ -37,6 +37,11 @@
 								<textarea name="mensagem" class="form-control" id="mensagem"></textarea>
 							</div>
 
+                            <div class="form-group">
+								<label for="senha">Senha</label>
+								<input name="senha" type="password" class="form-control" id="senha" placeholder="Senha aqui">
+							</div>
+
 							<button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
 						</form>
 					</div>
