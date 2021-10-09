@@ -76,7 +76,7 @@ if(!$mensagem->mensagemValida()) {
         $mail->Port       = 465;                //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('newslatter.dev@gmail.com', 'Remetente');
+        $mail->setFrom('newslatter.dev@gmail.com', 'Staack');
         $mail->addAddress($mensagem->__get('para'));     //Add a recipient
         //$mail->addAddress('ellen@example.com');               //Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');
