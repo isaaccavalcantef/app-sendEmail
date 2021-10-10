@@ -1,6 +1,4 @@
 <?php 
-
-    //Importando outros arquivos PHP
   
     //Usando os namespace
     use PHPMailer\PHPMailer\PHPMailer;
