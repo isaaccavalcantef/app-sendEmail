@@ -8,7 +8,7 @@ Consiste em enviar um email atráves da biblioteca PHP Mailer.
 - [X] Criar uma aplicação simples para enviar um mensagem via email
 - [X] Ultilizar o repositório PHP Mailer
 - [X] Ultilizar senha para fazer a autenticação
-- Criar uma configuração para alterar o email do remetente
-- Criar um campo para inserir o nome do remetente
+- [X] Criar uma configuração para alterar o email do remetente
+- [X] Criar um campo para inserir o nome do remetente
 - Colocar um edito rich text para personaliazar o texto
 - 
