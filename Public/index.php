@@ -52,7 +52,7 @@
                             <div class="form-group">
 								<label for="senha">Senha</label>
 								<input name="senha" type="password" class="form-control" id="senha" placeholder="Senha aqui">
-                                Senha de Testes: gckbnocvaaloerhn
+                                <p style="color: red; font-size: 0.85rem; ">Senha de Testes: gckbnocvaaloerhn </p>
                                 
                             </div>
                             
