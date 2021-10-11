@@ -14,6 +14,8 @@
         private $assunto = null;
         private $mensagem = null;
         private $senha = null;
+        private $de = null;
+        private $remetente = null;
         public $status = array('codigoStatus' => null, 'descricaoStatus' => '');
 
         public function __get($atributo) {
@@ -40,6 +42,9 @@ $mensagem = new Mensagem();
 $mensagem->__set('para', $_POST['para']);
 $mensagem->__set('assunto', $_POST['assunto']);
 $mensagem->__set('mensagem', $_POST['mensagem']);
+
+$mensagem->__set('de', $_POST['de']);
+$mensagem->__set('remetente', $_POST['remetente']);
 $mensagem->__set('senha', $_POST['senha']);
 
 
@@ -65,13 +70,13 @@ if(!$mensagem->mensagemValida()) {
         //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';               //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                           //Enable SMTP authentication
-        $mail->Username   = 'newslatter.dev@gmail.com';     //SMTP username
+        $mail->Username   = $mensagem->__get('de');      //'newslatter.dev@gmail.com';     //SMTP username
         $mail->Password   = $mensagem->__get('senha');      //SMTP password
         $mail->SMTPSecure = 'ssl';                          //Enable implicit TLS encryption
         $mail->Port       = 465;                            //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('newslatter.dev@gmail.com', 'Staack');
+        $mail->setFrom($mensagem->__get('de'), $mensagem->__get('remetente'));
         $mail->addAddress($mensagem->__get('para'));        //Add a recipient
         //$mail->addAddress('ellen@example.com');           //Name is optional
         //$mail->addReplyTo('info@example.com', 'Information');

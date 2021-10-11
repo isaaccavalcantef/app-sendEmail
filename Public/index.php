@@ -27,6 +27,11 @@
 								<input name="para" type="text" class="form-control" id="para" placeholder="joao@dominio.com.br">
 							</div>
 
+                            <div class="form-group">
+								<label for="remetente">Nome</label>
+								<input name="remetente" type="text" class="form-control" id="remetente" placeholder="Nome do remetente" value="Fala dev">
+							</div>
+
 							<div class="form-group">
 								<label for="assunto">Assunto</label>
 								<input name="assunto" type="text" class="form-control" id="assunto" placeholder="Assundo do e-mail">
@@ -37,13 +42,32 @@
 								<textarea name="mensagem" class="form-control" id="mensagem"></textarea>
 							</div>
 
+                            <hr>
+
+                            <div class="form-group">
+								<label for="de">Remetente</label>
+								<input name="de" type="text" class="form-control" id="de" placeholder="Email do remetente" value="newslatter.dev@gmail.com">
+							</div>
+
                             <div class="form-group">
 								<label for="senha">Senha</label>
 								<input name="senha" type="password" class="form-control" id="senha" placeholder="Senha aqui">
-							</div>
+                                Senha de Testes: gckbnocvaaloerhn
+                                
+                            </div>
+                            
+                            <div class="row ">
+                                <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
 
-							<button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+                                <a class="btn btn-primary btn-lg btn-warning ml-10" style="margin-left: 10px;" href="https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4PFGvGnb0fnwrFaLJHDT3Kim4F75NHcBB1PHRjAiUOyQqMfUgXjds0hTXeiXpHM5sBa2W2WlVw761wUIe5dOHoIp_2upA">
+                                    Config do Google
+                                </a>        
+
+                            </div>
+							
 						</form>
+
+                        </button>
 					</div>
 				</div>
       		</div>
